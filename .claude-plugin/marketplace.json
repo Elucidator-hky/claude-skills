@@ -1,0 +1,12 @@
+{
+  "name": "elucidator-skills",
+  "description": "一个重度把信息交给 Claude 处理的人，自己实测沉淀下来的 skill",
+  "owner": { "name": "Elucidator-hky" },
+  "plugins": [
+    {
+      "name": "cn-search",
+      "source": "./plugins/cn-search",
+      "description": "中英文多通道联网搜索编排 + 各通道踩坑记录"
+    }
+  ]
+}

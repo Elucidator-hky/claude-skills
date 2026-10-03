@@ -1,0 +1,7 @@
+{
+  "name": "cn-search",
+  "description": "中英文多通道联网搜索：内置 WebSearch 打底，按需并发知乎、GitHub、arXiv、Hacker News、阿里 OpenSearch、博查、Serper，附各通道实测的坑",
+  "version": "0.1.0",
+  "author": { "name": "Elucidator-hky" },
+  "license": "MIT"
+}
