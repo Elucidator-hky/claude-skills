@@ -1,12 +1,19 @@
 {
   "name": "elucidator-skills",
   "description": "一个重度把信息交给 Claude 处理的人，自己实测沉淀下来的 skill",
-  "owner": { "name": "Elucidator-hky" },
+  "owner": {
+    "name": "Elucidator-hky"
+  },
   "plugins": [
     {
       "name": "cn-search",
       "source": "./plugins/cn-search",
       "description": "中英文多通道联网搜索编排 + 各通道踩坑记录"
+    },
+    {
+      "name": "cn-transcribe",
+      "source": "./plugins/cn-transcribe",
+      "description": "视频号/B站/抖音视频和 iPhone 录音转中文逐字稿（带说话人）"
     }
   ]
 }

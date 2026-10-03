@@ -1,0 +1,7 @@
+{
+  "name": "cn-transcribe",
+  "description": "中文视频和录音转写：视频号绕道 B 站取内容，iPhone 语音备忘录转逐字稿，说话人分离 + 高精度中文 ASR + 自动校对",
+  "version": "0.1.0",
+  "author": { "name": "Elucidator-hky" },
+  "license": "MIT"
+}

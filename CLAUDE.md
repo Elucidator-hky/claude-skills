@@ -7,7 +7,7 @@
 - `.claude-plugin/marketplace.json` 列出全部插件，`name` = `elucidator-skills`
 - 每个插件一个目录 `plugins/<插件>/`，内含 `.claude-plugin/plugin.json` 和 `skills/<skill>/SKILL.md`
 - marketplace 条目的 `name` 与插件 `plugin.json` 的 `name` 保持一致
-- skill 自带脚本放 `skills/<skill>/scripts/`，SKILL.md 里用 `${CLAUDE_SKILL_DIR}/scripts/...` 引用
+- skill 自带脚本放 `skills/<skill>/scripts/`，SKILL.md 里用 `${CLAUDE_SKILL_DIR}/scripts/...` 引用；同插件多个 skill 共用的脚本放 `plugins/<插件>/scripts/`，用 `${CLAUDE_PLUGIN_ROOT}/scripts/...` 引用
 
 ## 从本机搬一个 skill 进来
 
@@ -25,6 +25,5 @@
 ## 进度
 
 - [x] cn-search（search skill + 6 个搜索脚本），2026-10-03 实测通过
-- [ ] video-transcript
-- [ ] voice-memo-transcript
-- [ ] 方法论文章 docs/
+- [x] cn-transcribe（video-transcript + voice-memo-transcript + 共用 transcribe.py），2026-10-03 实测通过；voice-memo 的人物对照表和公司会议流程留在本机原版
+- [x] 方法论文章 `docs/我怎么配置Claude.md`
