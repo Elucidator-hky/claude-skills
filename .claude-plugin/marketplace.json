@@ -14,6 +14,11 @@
       "name": "cn-transcribe",
       "source": "./plugins/cn-transcribe",
       "description": "视频号/B站/抖音视频和 iPhone 录音转中文逐字稿（带说话人）"
+    },
+    {
+      "name": "couple-photos",
+      "source": "./plugins/couple-photos",
+      "description": "本地人脸识别挑出两个人的照片和视频，iPhone 照片按拍摄时间归档"
     }
   ]
 }

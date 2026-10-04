@@ -1,0 +1,7 @@
+{
+  "name": "couple-photos",
+  "description": "本地人脸识别把两个人的照片和视频挑出来分成合照/只有我/只有她，并把 iPhone 照片按拍摄时间归档进统一图库",
+  "version": "0.1.0",
+  "author": { "name": "Elucidator-hky" },
+  "license": "MIT"
+}

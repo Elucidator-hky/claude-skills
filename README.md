@@ -8,6 +8,7 @@
 claude plugin marketplace add Elucidator-hky/claude-skills
 claude plugin install cn-search@elucidator-skills
 claude plugin install cn-transcribe@elucidator-skills
+claude plugin install couple-photos@elucidator-skills
 ```
 
 也可以把 `plugins/<插件>/skills/<skill>/` 整个目录拷进 `~/.claude/skills/` 直接用。
@@ -49,6 +50,14 @@ export SEARCH_PROXY=http://127.0.0.1:7890   # 国内网络访问 serper.dev 用
 - **voice-memo-transcript**：iPhone 语音备忘录经 iCloud 同步到 Mac 后，一句「看一下最新的录音」就转成带说话人的逐字稿，并自动校对错别字和专有名词
 
 依赖：`ffmpeg`、`yt-dlp`、`pip install dashscope`，环境变量 `DASHSCOPE_API_KEY`（阿里云百炼）。视频号元数据用 playwright MCP 取，没配的话 skill 会直接问你作者和标题。
+
+### couple-photos — 挑出两个人的照片和视频
+
+想做纪念视频、相册时，从几千张手机照片里把「我」和另一半挑出来，复制到 `合照 / 只有我 / 只有她 / 待确认`，视频也按同样规则分。全程本地人脸识别（OpenCV YuNet 检测 + SFace 特征），照片不上传。
+
+流程：`scan.py` 扫图库并聚类 → `match.py` 用几张两人参考照（如婚纱照）定位候选簇 → 用户在认人页指认 → `sort.py` / `videos.py` 预览后复制，原图不动。另带 `archive.py`：把 iPhone（afcclient 拉取）或外接盘照片按拍摄时间归档进统一图库，没有 EXIF 的截图和微信图用 iPhone 的 `Photos.sqlite` 补时间。
+
+依赖：macOS、`pip install opencv-python numpy`、`ffmpeg`；从 iPhone 直接拉照片要 `brew install libimobiledevice`。模型首次运行自动下载到 `~/.cache/couple-photos/models`。
 
 ## 方法论
 

@@ -27,3 +27,4 @@
 - [x] cn-search（search skill + 6 个搜索脚本），2026-10-03 实测通过
 - [x] cn-transcribe（video-transcript + voice-memo-transcript + 共用 transcribe.py），2026-10-03 实测通过；voice-memo 的人物对照表和公司会议流程留在本机原版
 - [x] 方法论文章 `docs/我怎么配置Claude.md`
+- [x] couple-photos（scan/match/sort/videos/archive + 模型自动下载），2026-10-04 实测通过；OSS 备份和本机路径留在本机原版
